@@ -1,0 +1,28 @@
+<div class="intro" ng-hide="thanks">
+  <div class="row start-head">
+    <h1> <strong>  Player!  </strong></h1>
+    <div id="owl-demo" style="display:none">
+      <div class="item" ng-repeat="item in items">
+        <h2 class="title"> {{item.title}} </h2>
+        <div class="box">
+          <img ng-src="{{item.src}}"  alt="Owl Image">
+
+          <div class="content">
+          <a class="start-button"  ng-hide="item.showPlay" href="" class="start-button" ng-click="play(item)">
+             Escuchalo!
+          </a>
+          <a class="stop-button" ng-show="item.showPlay" href="" class="start-button" ng-click="stop(item)">
+             Parar!
+          </a>
+
+
+            <a class="start-button" download="{{item.name}}" ng-href="{{item.audio}}"> Bajalo! </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <small>
+    <a class="start-button" href="/disco/full/PLACARD - Amor en el Fin del Mundo.zip" ng-click="showList()">Por Que no te bajas el  Entero disco ?!</a>
+    </small>
+  </div>
+</div>
